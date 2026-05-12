@@ -58,8 +58,8 @@ streamlit run streamlit_app.py
 
 | Component | Platform | Config |
 |---|---|---|
-| ⚙️ Backend | [Render.com]([https://render.com](https://car-price-predict-385b.onrender.com)) | Uses included `Procfile` |
-| 🎨 Frontend | [Streamlit Cloud]([https://streamlit.io/cloud](https://car-price-predict-b2ujwb8yit9flmiflzpjgc.streamlit.app/)) | Set `API_URL` env variable |
+| ⚙️ Backend | [Render.com]([https://render.com][https://car-price-predict-385b.onrender.com]) | Uses included `Procfile` |
+| 🎨 Frontend | [Streamlit Cloud]([https://streamlit.io/cloud][https://car-price-predict-b2ujwb8yit9flmiflzpjgc.streamlit.app/]) | Set `API_URL` env variable |
 
 > 💡 **Tip:** After deploying the backend to Render, copy its public URL and set it as `API_URL` in your Streamlit Cloud environment settings.
 
