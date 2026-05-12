@@ -6,7 +6,7 @@ st.set_page_config(page_title="Car Price Prediction", page_icon="🚗", layout="
 
 # Allow API_URL to be set via environment variable for deployment (e.g., in Streamlit Cloud secrets)
 # Fallback to local API if not provided.
-API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/predict")
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/predict" or "https://car-price-predict-385b.onrender.com/predict")
 
 st.title("🚗 Car Price Prediction")
 st.caption(
