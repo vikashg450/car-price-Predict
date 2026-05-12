@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.idea/
+.vscode/
+
+# Ignore large datasets or unnecessary generated files if needed, but model files are fine to push if < 100MB.
+# cardekho_data (1).csv
+# random_forest_model.pkl
+# feature_columns.pkl

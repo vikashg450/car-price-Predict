@@ -2,11 +2,13 @@ import pandas as pd
 import joblib
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
+from pathlib import Path
 
-DATA_PATH = "car-price-api/cardekho_data (1).csv"  # put the csv in project root (same as train.py)
-MODEL_PATH = "car-price-api/random_forest_model.pkl"
-COLS_PATH = "car-price-api/feature_columns.pkl"
-
+# Paths relative to the script location
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "cardekho_data (1).csv"
+MODEL_PATH = BASE_DIR / "random_forest_model.pkl"
+COLS_PATH = BASE_DIR / "feature_columns.pkl"
 
 def main():
     df = pd.read_csv(DATA_PATH)

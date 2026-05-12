@@ -1,12 +1,12 @@
+import os
 import streamlit as st
 import requests
 
 st.set_page_config(page_title="Car Price Prediction", page_icon="🚗", layout="centered")
 
-API_URL = (
-    "https://car-prediction-lpfl.onrender.com/predict"
-    or "http://127.0.0.1:8000/predict"
-)  # change if your endpoint differs
+# Allow API_URL to be set via environment variable for deployment (e.g., in Streamlit Cloud secrets)
+# Fallback to local API if not provided.
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/predict")
 
 st.title("🚗 Car Price Prediction")
 st.caption(
@@ -57,8 +57,7 @@ if st.button("Predict Price 💰"):
             data = res.json()
 
             # adjust keys based on your API response
-            # common patterns: {"prediction": 3.45} or {"predicted_price": 3.45}
-            pred = data.get("prediction", data.get("predicted_price", None))
+            pred = data.get("prediction_price", None)
 
             if pred is None:
                 st.warning(
